@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ddd;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+}
+
+.nav_top {
+  position: fixed;
+  right: 0;
+}
+
+
+.nav_top ul li {
+  display: inline-block;
+  padding: 20px 30px;
+
+
+}
+
+.cpzs:hover .xlcd {
+  display: block;
+}
+
+
+
+.xlcd a {
+  text-decoration: none;
+  display: inline-block;
+  width: 300px;
+  height: 50px;
+}
+
+
+
+
+
+.xlcd {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  display: none;
+  width: 100vw;
+  height: 300px;
+  background-color: rgb(255, 255, 255);
+}
+
+.first_list {
+  position: absolute;
+  left: 10vw;
+  /* background-color: red; */
+}
+
+.first_list li {
+  height: 50px;
+  line-height: 50px;
+  width: 300px;
+  /* display: block; */
+  text-align: center;
+}
+
+
+.ejcd {
+  background: url(./images/right.png) no-repeat right;
+
+  &:hover {
+    background: url(./images/red_right.png) no-repeat right;
+  }
+}
+
+.th_list {
+  background: url(./images/right.png) no-repeat right;
+
+  &:hover {
+    background: url(./images/red_right.png) no-repeat right;
+  }
+}
+
+.sec_list {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 300px;
+}
+
+.ejcd:hover .sec_list {
+  display: block;
+}
+
+.sjcd {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 300px;
+}
+
+.th_list:hover .sjcd {
+  display: block;
+}
