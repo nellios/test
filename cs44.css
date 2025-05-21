@@ -26,10 +26,16 @@ a:hover {
 }
 
 
-.nav_top ul li {
+
+.nav_top>ul {
+  width: 100vw;
+  text-align: right;
+  background-color: rgb(255, 255, 255);
+}
+
+.nav_top>ul>li {
   display: inline-block;
   padding: 20px 30px;
-
 
 }
 
@@ -64,14 +70,15 @@ a:hover {
   position: absolute;
   left: 10vw;
   /* background-color: red; */
+  /* display: flex; */
 }
 
 .first_list li {
   height: 50px;
   line-height: 50px;
   width: 300px;
-  /* display: block; */
   text-align: center;
+  /* display: inline-block; */
 }
 
 
