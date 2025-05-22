@@ -1,485 +1,348 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 99;
-  transition: background 0.3s, color 0.3s;
-  background: transparent;
-  color: #fff;
-}
-
-.navbar.scrolled {
-  background: #fff;
-  color: #111;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
-}
-
-.navbar .navbar-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 60px;
-  padding: 0 20px;
-}
-
-.navbar .logo {
-  font-size: 1.5em;
-  color: inherit;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-.navbar .nav-links {
-  list-style: none;
+* {
   margin: 0;
   padding: 0;
-  display: flex;
 }
 
-.navbar .nav-links li {
-  margin-left: 24px;
-}
-
-.navbar .nav-links a {
-  color: inherit;
-  text-decoration: none;
-  font-size: 1.1em;
-  transition: color 0.3s;
-}
-
-.content {
-  margin-top: 70px;
-  padding: 24px;
-}
-
-* {
-  margin: 0px;
-  padding: 0px;
-}
-
-.top_ul {
-  /* list-style: none; */
-
-}
-
-ul li {
-  display: inline;
-  margin-right: 20px;
-}
-
-/* 设置菜单栏默认值 */
-.navbar {
-  position: fixed;
-  text-align: right;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 40px;
-  background-color: transparent;
-  color: rgb(0, 0, 0);
-  padding-top: 15px;
-
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  z-index: 1000;
-}
-
-/* 滚动屏幕菜单栏变色 */
-.navbar.scrolled {
+body {
   background-color: #ffffff;
-  color: #000000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-a:link {
-  color: white;
+ul {
+  list-style: none;
 }
 
-a:link {
+a {
+  color: black;
   text-decoration: none;
-  color: rgb(255, 255, 255);
 }
 
-/*未访问的链接显示为蓝色，text-decoration:none将下划线隐藏*/
-a:visited {
-  color: rgb(255, 255, 255);
-}
-
-/*用户已访问过的链接显示黑色*/
 a:hover {
-  color: rgb(224, 13, 48);
+  color: #E60000;
 }
 
-/*鼠标放置在链接上时显示为粉色*/
-a:active {
-  color: rgb(224, 13, 48);
+.nav_top {
+  position: fixed;
+  right: 0;
+  z-index: 100;
 }
 
-/* .home_bg {
-  background-image: url('/images/bg1.jpg');
+.nav_top>ul {
   width: 100vw;
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: 100%;
-} */
-
-.navbar .home_link {
-  color: #fff;
-  transition: color 0.3s;
+  text-align: right;
+  background-color: rgb(255, 255, 255);
 }
 
-.navbar.scrolled .home_link {
-  color: #000;
+.nav_top>ul>li {
+  display: inline-block;
 }
 
-.navbar .home_link:hover,
-.navbar .home_link:active {
-  color: rgb(224, 13, 48);
+/* 内边距从第二个li开始（影响logo） */
+.nav_top>ul>li:nth-of-type(n+2) {
+  padding: 20px 30px;
 }
 
+.cpzs:hover .xlcd {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
 
-/* <!-- Swiper 样式 --> */
+.xlcd a {
+  text-decoration: none;
+  display: inline-block;
+  width: 300px;
+  height: 50px;
+}
 
-.swiper {
+.xlcd {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  width: 100vw;
+  height: 300px;
+  background-color: rgb(255, 255, 255);
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.first_list {
+  position: absolute;
+  left: 10vw;
+}
+
+.first_list li {
+  height: 50px;
+  line-height: 50px;
+  width: 300px;
+  text-align: center;
+}
+
+.ejcd {
+  background: url(./images/right.png) no-repeat right;
+}
+
+.ejcd:hover {
+  background: url(./images/red_right.png) no-repeat right;
+}
+
+.th_list {
+  background: url(./images/right.png) no-repeat right;
+}
+
+.th_list:hover {
+  background: url(./images/red_right.png) no-repeat right;
+}
+
+.sec_list {
+  position: absolute;
+  top: 0;
+  left: 300px;
+}
+
+.sjcd {
+  position: absolute;
+  top: 0;
+  left: 300px;
+}
+
+.logo-li {
+  position: fixed;
+  display: inline-block;
+  left: 0;
+  height: 0;
+  margin: 8px;
+}
+
+.logo-img {
+  height: 50px;
+  width: auto;
+}
+
+/* 通用下拉菜单过渡样式 */
+.xlcd,
+.sec_list,
+.sjcd {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.cpzs:hover .xlcd {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.ejcd:hover .sec_list {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.th_list:hover .sjcd {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* 顶部大图轮播 Swiper 样式 */
+.swiper-banner {
   width: 100vw;
   height: 80vh;
   margin: auto;
-  /* border-radius: 8px; */
   box-shadow: 0 2px 8px #0002;
+  position: relative;
 }
 
+.swiper-banner .swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
 
-.swiper-pagination-bullet {
+.swiper-banner .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-banner .swiper-pagination-bullet {
   background: #e00d30;
-  /* 设置圆点的背景色为红色（#e00d30） */
   opacity: 0.4;
-  /* 设置圆点的透明度为0.4（半透明） */
-  /* 圆点的高度为12像素 */
   margin: 0 4px !important;
-  /* 圆点之间左右间距为4像素，!important用于确保优先级最高 */
 }
 
-.swiper-pagination-bullet-active {
+.swiper-banner .swiper-pagination-bullet-active {
   opacity: 1;
-
-  /* 选中的圆点透明度为1（不透明，实心） */
   background: #e00d30 !important;
-  ;
-  /* 选中的圆点仍然是红色 */
-  /* 无需 box-shadow 等高亮效果 */
 }
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
-.navbar {
-  position: fixed;
-  top: 0;
+/* 产品认证轮播 Swiper 样式 */
+.swiper-auth {
   width: 100%;
-  z-index: 99;
-  transition: background 0.3s, color 0.3s;
-  background: transparent;
-  color: #fff;
+  height: auto;
+  padding: 90px 0;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  background: none;
 }
 
-.navbar.scrolled {
-  background: #fff;
-  color: #111;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
-}
-
-.navbar .navbar-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 60px;
-  padding: 0 20px;
-}
-
-.navbar .logo {
-  font-size: 1.5em;
-  color: inherit;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-/* 鼠标移入LOGO时变红 */
-.navbar .logo:hover {
-  color: red;
-}
-
-.navbar .nav-links {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-.navbar .nav-links li {
-  margin-left: 24px;
-}
-
-.navbar .nav-links a {
-  color: inherit;
-  text-decoration: none;
-  font-size: 1.1em;
-  transition: color 0.3s;
-}
-
-/* 鼠标移入导航链接时字体变红 */
-.navbar .nav-links a:hover {
-  color: red;
-}
-
-.content {
-  margin-top: 70px;
-  padding: 24px;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
-.navbar {
-  position: fixed;
-  top: 0;
+.swiper-auth .swiper-wrapper {
   width: 100%;
-  z-index: 99;
-  transition: background 0.3s, color 0.3s;
+}
+
+.swiper-auth .swiper-slide {
+  text-align: center;
+  font-size: 18px;
   background: transparent;
-  color: #fff;
-}
-
-.navbar.scrolled,
-.navbar.menu-open {
-  background: #fff;
-  color: #111;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
-}
-
-.navbar .navbar-container {
-  max-width: 1200px;
-  margin: 0 auto;
+  height: 100px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  height: 60px;
-  padding: 0 20px;
+  transition-property: all;
 }
 
-.navbar .logo {
-  font-size: 1.5em;
-  color: inherit;
+.swiper-auth .swiper-slide img {
+  height: 100px;
+  width: auto;
+}
+
+/* 关于我们 */
+.about {
+  text-align: center;
+  background-color: white;
+}
+
+.about-title {
+  display: inline-block;
+  left: 50%;
+  font-size: 18px;
+  color: #666;
+  padding: 50px 0 20px 0;
+  border-bottom: 2px solid #E60000;
+}
+
+.about-text {
+  margin-top: 20px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.about>button {
+  border-radius: 5px;
+  background-color: #E60000;
+  border: none;
+  color: white;
+  width: 200px;
+  height: 55px;
+  text-align: center;
   text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
+  display: inline-block;
+  font-size: 18px;
+  margin-bottom: 80px;
 }
 
-.navbar .logo:hover {
-  color: red;
+.about>button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
-.navbar .nav-links {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  position: relative;
-  height: 60px;
-}
-
-.navbar .nav-links li {
-  margin-left: 24px;
-  position: relative;
-  height: 60px;
-  display: flex;
-  align-items: center;
-}
-
-.navbar .nav-links a {
-  color: inherit;
-  text-decoration: none;
-  font-size: 1.1em;
-  transition: color 0.3s;
-  padding: 0 8px;
-  line-height: 60px;
-  display: block;
-  height: 100%;
-}
-
-.navbar .nav-links a:hover {
-  color: red;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  z-index: 99;
-  transition: background 0.3s, color 0.3s;
-  background: transparent;
-  color: #fff;
-}
-
-.navbar.scrolled,
-.navbar.menu-open {
-  background: #fff;
-  color: #111;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
-}
-
-.navbar .navbar-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 60px;
-  padding: 0 20px;
-  position: relative;
-  z-index: 2;
-}
-
-.navbar .logo {
-  font-size: 1.5em;
-  color: inherit;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-.navbar .logo:hover {
-  color: red;
-}
-
-.navbar .nav-links {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  position: relative;
-  height: 60px;
-}
-
-.navbar .nav-links li {
-  margin-left: 24px;
-  position: relative;
-  height: 60px;
-  display: flex;
-  align-items: center;
-}
-
-.navbar .nav-links a {
-  color: inherit;
-  text-decoration: none;
-  font-size: 1.1em;
-  transition: color 0.3s;
-  padding: 0 8px;
-  line-height: 60px;
-  display: block;
-  height: 100%;
-}
-
-.navbar .nav-links a:hover {
-  color: red;
-}
-
-/* 二级菜单样式，绝对定位于.navbar下方，无间隙 */
-.submenu {
-  display: none;
-  position: fixed;
-  top: 60px;
-  /* 紧贴主导航栏底部 */
-  left: 0;
-  width: 100vw;
-  background: #fff;
-  color: #111;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
-  padding: 0;
-  z-index: 98;
-  border-bottom: 1px solid #eee;
-  animation: fadeIn 0.2s;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.submenu ul {
-  list-style: none;
-  padding: 12px 0;
-  margin: 0 auto;
-  max-width: 1200px;
-  display: flex;
-}
-
-.submenu ul li {
-  margin-right: 36px;
-}
-
-.submenu ul li:last-child {
-  margin-right: 0;
-}
-
-.submenu ul li a {
-  color: #111;
-  font-size: 1em;
-  padding: 8px 16px;
-  transition: color 0.3s;
-  text-decoration: none;
-}
-
-.submenu ul li a:hover {
-  color: red;
-}
-
-/* 显示submenu，仅navbar.menu-open时 */
-.navbar.menu-open .submenu {
-  display: block;
-}
-
-/* 内容区 */
+/* 底部固定图片 */
 .content {
-  margin-top: 70px;
-  padding: 24px;
+  background-image: url(./images/bg1.jpg);
+  background-attachment: fixed;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
-/* 响应式可选 */
-@media (max-width: 900px) {
-  .submenu ul {
-    flex-direction: column;
-    max-width: 100%;
-    padding-left: 20px;
-  }
+.product_auth {
+  text-align: center;
+  color: white;
+  padding-bottom: 30px;
+}
 
-  .submenu ul li {
-    margin: 8px 0;
-  }
+.product_auth h5 {
+  margin: 50px 0 30px 0;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.product_auth p {
+  padding-bottom: 10px;
+}
+
+.auth_img {
+  padding-bottom: 80px;
+}
+
+.product_butt_middle {
+  margin: 10px 0;
+  border: 1px solid #D7D7D7;
+}
+
+/* 底部灰色栏 */
+.nav_button {
+  background-color: #61696D;
+  height: 300px;
+  padding-top: 60px;
+
+}
+
+.nav_button a {
+  color: #ababab;
+}
+
+.nav_button a:hover {
+  color: white;
+}
+
+.nav_button ul li {
+  /* display: inline; */
+  padding-bottom: 20px;
+  font-size: 13px;
+}
+
+.nav_button h5 {
+  font-weight: 400;
+  font-size: 18px;
+  padding-bottom: 20px;
+}
+
+.but_first {
+  /* margin-left: 200px; */
+  position: absolute;
+  left: 15%;
+  display: inline-block;
+
+}
+
+.but_sec {
+  display: inline-block;
+  position: absolute;
+  left: 30%;
+}
+
+.but_th {
+  position: absolute;
+  left: 45%;
+  display: inline-block;
+}
+
+.but_fou {
+  position: absolute;
+  left: 60%;
+  display: inline-block;
+}
+
+.but_end {
+  position: absolute;
+  left: 75%;
+  display: inline-block;
+}
+
+.but_end img {
+  width: 100px;
+  height: 100px;
 }
