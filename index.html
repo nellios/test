@@ -1,228 +1,205 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
-  <title>右对齐菜单 + 居中表格</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="styles.css">
-
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-    }
-
-    .menu {
-      width: 100%;
-      text-align: right;
-
-    }
-
-    .menu ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: inline-block;
-      vertical-align: top;
-    }
-
-    .dropdown {
-      position: relative;
-      /* 顶部导航栏宽度 */
-      padding: 20px 20px;
-      background: white;
-      cursor: pointer;
-      display: inline-block;
-      outline: none;
-    }
-
-    .submenu {
-      /* 下拉菜单 */
-      display: none;
-      position: fixed;
-      top: 7%;
-      left: 50%;
-      transform: translate(-50%, 0);
-      background: rgb(255, 255, 255);
-      z-index: 1000;
-      padding: 10px;
-      width: 100vw;
-      align-items: center;
-    }
-
-    .submenu table {
-      border-collapse: collapse;
-      width: 600px;
-      float: left;
-      color: rgb(0, 0, 0);
-      text-align: left;
-      /* margin: auto; */
-
-      margin-left: 18.75rem;
-
-
-    }
-
-
-
-    .submenu td {
-      padding: 12px 0px;
-      /* border: 1px solid red; */
-    }
-
-    .dropdown_home {
-      position: relative;
-      padding: 10px 20px;
-      background: white;
-      cursor: pointer;
-      display: inline-block;
-      outline: none;
-    }
-
-    #home_img {
-      height: 200px;
-      margin-right: 200px;
-    }
-
-    #home_logo {
-      width: 3.125rem;
-      float: left;
-      margin-left: .625rem;
-      margin-top: .5rem;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="swiper-bundle.min.css">
 </head>
 
 <body>
-
-  <nav class="menu">
-    <img src="./images/logo.png" alt="logo" id="home_logo">
+  <div class="nav_top">
     <ul>
-      <li class="dropdown_home"><a href="">首页</a></li>
-      <li class="dropdown_home"><a href="">关于我们</a></li>
-
-      <li class="dropdown" tabindex="0">
-        <a href="">产品展示</a>
-        <div class="submenu" id="submenu1">
-          <table>
-            <tr>
-              <td><a href="">SPC地板</a></td>
-              <td><a href="">锁扣地板</a></td>
-              <td><a href="">木纹</a></td>
-              <!-- <td rowspan="6" style="text-align: center; padding-left: 20px;"><img src="./images/bg1.jpg" alt=""
-                  height="200px"></td> -->
-
-            </tr>
-            <tr>
-              <td rowspan="2"><a href="">墙板</a></td>
-              <td><a href="">艺术地板</a></td>
-              <td><a href="">石纹</a></td>
-
-            </tr>
-            <tr>
-              <!-- <td>墙板</td> -->
-              <td><a href="">防烟烫&nbsp;耐刮伤</a></td>
-              <td><a href="">地毯纹</a></td>
-
-            </tr>
-
-          </table>
-          <img src="./images/bg1.jpg" alt="" id="home_img">
+      <li class="logo-li">
+        <img src="./images/logo.png" alt="logo" class="logo-img">
+      </li>
+      <li><a href="">首页</a></li>
+      <li><a href="">关于我们</a></li>
+      <li class="cpzs"><a href="">产品展示</a>
+        <div class="xlcd">
+          <ul class="first_list">
+            <li class="ejcd"><a href="">SPC地板</a>
+              <ul class="sec_list">
+                <li class="th_list"><a href="">锁扣地板</a>
+                  <ul class="sjcd">
+                    <li><a href="">木纹</a></li>
+                    <li><a href="">石纹</a></li>
+                    <li><a href="">地板纹</a></li>
+                  </ul>
+                </li>
+                <li><a href="">艺术地板</a></li>
+                <li><a href="">防烟烫耐刮伤</a></li>
+              </ul>
+            </li>
+            <li><a href="">墙板</a></li>
+          </ul>
         </div>
       </li>
-      <li class="dropdown_home"><a href="">工程案例</a></li>
-      <li class="dropdown_home"><a href="">新闻媒体</a></li>
-      <li class="dropdown_home"><a href="">联系我们</a></li>
+      <li><a href="">工程案例</a></li>
+      <li><a href="">新闻媒体</a></li>
+      <li><a href="">联系我们</a></li>
     </ul>
-  </nav>
+  </div>
 
-  <!-- Swiper 结构 -->
-  <div class="swiper">
+  <!-- 顶部大图轮播 Swiper -->
+  <div class="swiper swiper-banner">
     <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="./images/bg1.jpg" alt="图1" style="width:100%;height:100%"></div>
-      <div class="swiper-slide"><img src="./images/bg2.jpg" alt="图2" style="width:100%;height:100%"></div>
-      <div class="swiper-slide"><img src="./images/bg3.jpg" alt="图3" style="width:100%;height:100%"></div>
+      <div class="swiper-slide"><img src="./images/bg1.jpg" alt="图1"></div>
+      <div class="swiper-slide"><img src="./images/bg2.jpg" alt="图2"></div>
+      <div class="swiper-slide"><img src="./images/bg3.jpg" alt="图3"></div>
     </div>
-    <!-- 分页器（指示当前第几张） -->
     <div class="swiper-pagination"></div>
   </div>
-  <div class="box111" style="height: 1000px;"></div>
+
+  <div class="content">
+    <!-- 关于我们 -->
+    <div class="about">
+      <div class="about-title">关于我们</div>
+      <p class="about-text">环保高端安全舒适地板墙板解决方案</p>
+      <button class="but-more">了解更多</button>
+    </div>
+    <!-- 产品认证 -->
+    <div class="product_auth">
+      <h5>产品认证</h5>
+      <p>真正的绿色环保建材，不砍伐树木，无甲醛，旧地板可回收再利用</p>
+      <p>产品符合欧美市场严苛的室内空气质量与排放要求，先后通过ISO9001质量管理和ISO14001环境管理体系认证，</p>
+      <p>并取得了美国UL绿色卫士金级认证、欧盟IAC健康金级认证等发达国家装饰材料品质标准和市场准入通行证</p>
+    </div>
+    <!-- 产品认证轮播图 -->
+    <div class="swiper swiper-auth">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="./images/u10.png" alt=""></div>
+        <div class="swiper-slide"><img src="./images/u11.png" alt=""></div>
+        <div class="swiper-slide"><img src="./images/u12.png" alt=""></div>
+        <div class="swiper-slide"><img src="./images/u13.png" alt=""></div>
+        <div class="swiper-slide"><img src="./images/u10.png" alt=""></div>
+        <div class="swiper-slide"><img src="./images/u11.png" alt=""></div>
+        <div class="swiper-slide"><img src="./images/u12.png" alt=""></div>
+        <div class="swiper-slide"><img src="./images/u13.png" alt=""></div>
+        <div class="swiper-slide"><img src="./images/u10.png" alt=""></div>
+        <div class="swiper-slide"><img src="./images/u11.png" alt=""></div>
+        <div class="swiper-slide"><img src="./images/u12.png" alt=""></div>
+        <div class="swiper-slide"><img src="./images/u13.png" alt=""></div>
+      </div>
+    </div>
+    <div class="auth_img"></div>
+  </div>
+  <div class="product_butt_middle"></div>
+  <!-- 底部nav栏 -->
+
+  <div class="nav_button">
+    <div class="but_first">
+      <ul class="vertical-list">
+        <h5><a href="">关于我们</a></h5>
+        <li><a href="">品牌故事</a></li>
+        <li><a href="">企业文化</a></li>
+        <li><a href="">文化创新</a></li>
+      </ul>
+
+    </div>
+    <div class="but_sec">
+      <ul>
+        <h5><a href="">产品展示</a></h5>
+        <li><a href="">防烟烫 耐刮伤</a></li>
+        <li><a href="">艺术地板</a></li>
+        <li><a href="">锁扣地板</a></li>
+      </ul>
+    </div>
+    <div class="but_th">
+      <ul>
+        <h5><a href="">加入我们</a></h5>
+        <li><a href="">社会招聘</a></li>
+        <li><a href="">校园招聘</a></li>
+        <li><a href="">人才推荐</a></li>
+      </ul>
+    </div>
+    <div class="but_fou">
+      <ul>
+        <h5><a href="">联系我们</a></h5>
+        <li><a href="">在线沟通</a></li>
+        <li><a href="">邮箱沟通</a></li>
+      </ul>
+    </div>
+    <div class="but_end">
+      <li style="list-style: none;">
+        <img src="./images/ewm.png" alt="">
+      </li>
+    </div>
+  </div>
 
 
-  <!-- <script>
-    const dropdown = document.querySelector('.dropdown');
-    const submenu = document.getElementById('submenu1');
-
-    dropdown.addEventListener('mouseenter', () => {
-      submenu.style.display = 'block';
-    });
-
-    dropdown.addEventListener('mouseleave', () => {
-      // 延迟隐藏防止抖动
-      setTimeout(() => {
-        if (!submenu.matches(':hover')) {
-          submenu.style.display = 'none';
-        }
-      }, 100);
-    });
-
-    submenu.addEventListener('mouseleave', () => {
-      submenu.style.display = 'none';
-    });
-  </script> -->
-  <script>
-    const dropdown = document.querySelector('.dropdown');
-    const submenu = document.getElementById('submenu1');
-
-    let isHovering = false;
-
-    dropdown.addEventListener('mouseover', () => {
-      isHovering = true;
-      submenu.style.display = 'block';
-    });
-
-    dropdown.addEventListener('mouseout', () => {
-      isHovering = false;
-      setTimeout(() => {
-        if (!isHovering && !submenu.matches(':hover')) {
-          submenu.style.display = 'none';
-        }
-      }, 100);
-    });
-
-    submenu.addEventListener('mouseover', () => {
-      isHovering = true;
-      submenu.style.display = 'block';
-    });
-
-    submenu.addEventListener('mouseout', () => {
-      isHovering = false;
-      setTimeout(() => {
-        if (!isHovering && !dropdown.matches(':hover')) {
-          submenu.style.display = 'none';
-        }
-      }, 100);
-    });
-  </script>
 
 
+
+
+
+
+
+
+
+
+  <script src="script.js"></script>
   <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script src="swiper-bundle.min.js"></script>
+
+
   <script>
-    const swiper = new Swiper('.swiper', {
-      loop: true, // 循环轮播
-      autoplay: {
-        delay: 2500, // 自动切换时间（毫秒）
-        disableOnInteraction: false // 用户操作后仍自动切换
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets', // 小数形式，如“1/3”
-      },
-      // 支持手指滑动、鼠标拖拽，无需额外配置
-    });
+
+    // 顶部大图轮播
+    (function () {
+      const swiperBanner = new Swiper('.swiper-banner', {
+        loop: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false
+        },
+        pagination: {
+          el: '.swiper-banner .swiper-pagination',
+          type: 'bullets'
+        }
+      });
+    })();
   </script>
+  <script>
+    // 产品认证轮播
+    (function () {
+      const swiperAuth = new Swiper('.swiper-auth', {
+        loop: true,
+        speed: 2500,
+        slidesPerView: 7,
+        autoplay: {
+          delay: 30,
+          stopOnLastSlide: false,
+          disableOnInteraction: true,
+        },
+        spaceBetween: 30,
+        centeredSlides: true,
+        watchSlidesProgress: true,
+        on: {
+          setTranslate(swiperInstance) {
+            const slides = swiperInstance.slides;
+            for (let i = 0; i < slides.length; i++) {
+              const slide = slides[i];
+              slide.style.opacity = '';
+              slide.style.background = '';
+              slide.style.transform = '';
+            }
+          },
+          setTransition(swiperInstance, transition) {
+            const slides = swiperInstance.slides;
+            for (let i = 0; i < slides.length; i++) {
+              slides[i].style.transitionDuration = `${transition}ms`;
+            }
+          },
+        }
+      });
+    })();
+
+  </script>
+
 </body>
 
 </html>
