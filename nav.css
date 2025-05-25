@@ -125,6 +125,36 @@ a:hover {
   width: auto;
 }
 
+/* 下拉菜单右侧图片 */
+.xlcd_right_img {
+  height: 200px;
+  /* 按需调整 */
+  margin-left: auto;
+  margin-right: 10vw;
+  margin-top: 20px;
+  /* 距离右侧一点间距 */
+  display: block;
+  margin-bottom: 10px;
+}
+
+.xlcd_Boutique_cases {
+  margin-top: 20px;
+  font-size: 16px;
+  margin-right: 25%;
+  color: #222;
+  font-weight: bold;
+
+}
+
+.xlcd_Learn_more {
+  margin-top: 20px;
+  font-size: 12px;
+  margin-right: 26%;
+  color: #ccc;
+
+}
+
+
 /* 通用下拉菜单过渡样式 */
 .xlcd,
 .sec_list,
