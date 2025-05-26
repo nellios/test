@@ -1,0 +1,165 @@
+body {
+  background-color: #F8F8F8;
+}
+
+.slide-content>.view-details {
+  display: inline-block;
+  padding-right: 30px;
+  font-size: 16px;
+  background: url(/images/right.png) no-repeat right center;
+
+}
+
+.slide-content>.view-details:hover {
+  background: url(/images/red_right.png) no-repeat right center;
+}
+
+.news_media {
+  margin-top: 80px;
+}
+
+.news_first {
+  width: 70%;
+  position: relative;
+  left: 15%;
+  height: 200px;
+  background-color: #fff;
+  z-index: 10;
+  margin-bottom: 50px;
+
+}
+
+
+
+
+/* 新闻公告文字 */
+.news_first_text {
+  float: left;
+  width: 30%;
+  height: 200px;
+  background-color: #E60000;
+  line-height: 200px;
+  font-size: 60px;
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+}
+
+
+
+/* 新闻公告右边 */
+.news_first_content {
+  float: left;
+  color: #000;
+  font-size: 18px;
+  /* padding: 50px; */
+}
+
+
+
+.news_first_content li {
+  padding: 30px 0 0px 50px;
+}
+
+
+.news_first_time {
+  font-size: 15px;
+  color: #ACACAC;
+}
+
+.new_firsst_summary {
+  color: #ACACAC;
+  font-size: 16px;
+}
+
+
+
+.news_second {
+  width: 70%;
+  position: relative;
+  left: 15%;
+  height: 200px;
+  background-color: #fff;
+  z-index: 1000;
+  margin-bottom: 50px;
+}
+
+/* 第二个左边 */
+.news_second_content {
+  float: left;
+  width: 70%;
+  height: 200px;
+  font-size: 18px;
+  background-color: #ffffff;
+
+}
+
+/* 第二个右边新闻公告 */
+.news_second_text {
+  float: left;
+  height: 200px;
+  width: 30%;
+  color: #fff;
+  background-color: #E60000;
+  line-height: 200px;
+  font-size: 60px;
+  text-align: center;
+  font-weight: 700;
+}
+
+
+.news_second_content li {
+  padding: 30px 0 0px 50px;
+}
+
+
+.news_second_time {
+  font-size: 15px;
+  color: #ACACAC;
+}
+
+.new_second_summary {
+  color: #ACACAC;
+  font-size: 16px;
+}
+
+/* 第一个新闻鼠标移入效果 */
+.news_first_text,
+.news_first_title {
+  transition: font-size 0.3s, color 0.3s;
+}
+
+.news_first:hover .news_first_text {
+  font-size: 65px;
+  /* 鼠标移入时字体变大 */
+}
+
+.news_first:hover .news_first_title {
+  color: #E60000;
+  /* 鼠标移入时标题变红 */
+}
+
+/* 第二个新闻鼠标移入效果 */
+.news_second_text,
+.news_second_title {
+  transition: font-size 0.3s, color 0.3s;
+}
+
+.news_second:hover .news_second_text {
+  font-size: 65px;
+  /* 鼠标移入时字体变大 */
+}
+
+.news_second:hover .news_second_title {
+  color: #E60000;
+  /* 鼠标移入时标题变红 */
+}
+
+/* 鼠标移入阴影 */
+.news_first:hover {
+  box-shadow: 1px 1px 5px #ccc;
+}
+
+.news_second:hover {
+  box-shadow: 1px 1px 5px #ccc;
+}
