@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新闻媒体</title>
+  <link rel="stylesheet" href="./swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./css/news.css">
+  <link rel="stylesheet" href="./css/nav.css">
+
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 60%;
+      position: relative;
+      /* padding-top: 60px; */
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* 半透明遮罩层 */
+    .slide-overlay {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 80%;
+      width: 45%;
+      /* 可按需调整 */
+      background: rgba(255, 255, 255, 0.7);
+      /* 白色半透明 */
+      z-index: 2;
+    }
+
+    /* 右侧内容可自定义，也可加文字等 */
+    .slide-content {
+      position: absolute;
+      top: 50%;
+      right: 2%;
+      transform: translateY(-50%);
+      z-index: 3;
+      text-align: left;
+      color: #222;
+      max-width: 40%;
+      font-size: 1.6em;
+      opacity: 1;
+    }
+
+    @media (max-width: 900px) {
+
+      .slide-overlay,
+      .slide-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        right: 0;
+      }
+
+      .slide-content {
+        font-size: 1em;
+        padding: 10px;
+      }
+    }
+
+    .slide-content h2 {
+      font-size: 30px;
+    }
+
+    .slide-content p {
+      font-size: 18px;
+    }
+
+    .slide-content h2 {
+      font-size: 30px;
+      margin-bottom: 16px;
+      /* 新增 */
+    }
+
+    .slide-content p {
+      font-size: 18px;
+      margin-bottom: 10px;
+      /* 新增 */
+      line-height: 1.6;
+      /* 新增 */
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- 顶部菜单栏 -->
+  <!-- 顶部菜单栏 -->
+  <div class="nav_top" id="mainNav">
+    <ul>
+      <li class="logo-li">
+        <img src="/images/logo.png" alt="logo" class="logo-img">
+      </li>
+      <li><a href="/index.html">首页</a></li>
+      <li><a href="/about.html">关于我们</a></li>
+      <li class="cpzs"><a href="display.html">产品展示</a>
+        <div class="xlcd">
+          <ul class="first_list">
+            <li class="ejcd"><a href="/display.html">SPC地板</a>
+              <ul class="sec_list">
+                <li class="th_list"><a href="/display.html">锁扣地板</a>
+                  <ul class="sjcd">
+                    <li><a href="/display.html#Wood_grain">木纹</a></li>
+                    <li><a href="/display.html#Stone_grain">石纹</a></li>
+                    <li><a href="/display.html#Carpet_grain">地板纹</a></li>
+                  </ul>
+                </li>
+                <li><a href="/artistic_flooring.html#artisti_grain">艺术地板</a></li>
+                <li><a href="/features.html#features_grain">防烟烫耐刮伤</a></li>
+              </ul>
+            </li>
+            <li><a href="">墙板</a></li>
+          </ul>
+          <img src="./images/u91.jpg" alt="" class="xlcd_right_img">
+          <span class="xlcd_Boutique_cases">精品案例
+          </span>
+          <span class="xlcd_Learn_more">
+            <br>
+            <a href="/case.html">了解更多</a>
+          </span>
+        </div>
+      </li>
+      <li><a href="/case.html">工程案例</a></li>
+      <li><a href="/news.html">新闻媒体</a></li>
+      <li><a href="/Contact-us.html">联系我们</a></li>
+    </ul>
+  </div>
+
+
+
+
+
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="./images/u583.jpg" alt="">
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <h2>蒙古国副总统莅临视察</h2>
+          <p>蒙古国副总统莅临江西盛和赛新材料有限公司进行地板考察访问 </p>
+          <p>共商绿色建材合作新机遇</p>
+          <!-- <p><a href="#" style="color:#222;text-decoration:none;">查看详细&nbsp;&nbsp;&gt;</a></p> -->
+          <li class="view-details"><a href="">查看详细</a></li>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="./images/u584.jpg" alt="">
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <h2>蒙古国副总统莅临视察</h2>
+          <p>蒙古国副总统莅临江西盛和赛新材料有限公司进行地板考察访问</p>
+          <p>共商绿色建材合作新机遇</p>
+          <li class="view-details"><a href="">查看详细</a></li>
+
+
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="./images/u583.jpg" alt="">
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <h2>蒙古国副总统莅临视察</h2>
+          <p>蒙古国副总统莅临江西盛和赛新材料有限公司进行地板考察访问</p>
+          <p>共商绿色建材合作新机遇</p>
+          <li class="view-details"><a href="">查看详细</a></li>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 新闻 -->
+  <div class="news_media">
+    <!-- 第一个新闻 -->
+    <a href="/news/first-news.html" target="_blank">
+      <div class="news_first">
+        <div class="news_first_text">新闻公告</div>
+        <div class="news_first_content">
+          <ul>
+            <li class="news_first_title">蒙古国副总统莅临考察</li>
+            <li class="news_first_time">2025-05-07</li>
+            <li class="new_firsst_summary">蒙古国副总统莅临江西盛和赛新材料有限公司进行地板考察访问共商绿色建材合作新机遇</li>
+          </ul>
+        </div>
+
+      </div>
+    </a>
+    <!-- 第二个新闻 -->
+    <a href="/news/first-news.html" target="_blank">
+      <div class="news_second">
+        <div class="news_second_content">
+          <ul>
+            <li class="news_second_title">蒙古国副总统莅临考察</li>
+            <li class="news_second_time">2025-05-07</li>
+            <li class="new_second_summary">蒙古国副总统莅临江西盛和赛新材料有限公司进行地板考察访问共商绿色建材合作新机遇</li>
+          </ul>
+        </div>
+        <div class="news_second_text">新闻公告</div>
+
+      </div>
+    </a>
+  </div>
+
+  <!-- 底部nav栏 -->
+  <div class="nav_button">
+    <div class="but_first">
+      <ul class="vertical-list">
+        <h5><a href="">关于我们</a></h5>
+        <li><a href="">品牌故事</a></li>
+        <li><a href="">企业文化</a></li>
+        <li><a href="">文化创新</a></li>
+      </ul>
+    </div>
+    <div class="but_sec">
+      <ul>
+        <h5><a href="">产品展示</a></h5>
+        <li><a href="">防烟烫 耐刮伤</a></li>
+        <li><a href="">艺术地板</a></li>
+        <li><a href="">锁扣地板</a></li>
+      </ul>
+    </div>
+    <div class="but_th">
+      <ul>
+        <h5><a href="">加入我们</a></h5>
+        <li><a href="">社会招聘</a></li>
+        <li><a href="">校园招聘</a></li>
+        <li><a href="">人才推荐</a></li>
+      </ul>
+    </div>
+    <div class="but_fou">
+      <ul>
+        <h5><a href="">联系我们</a></h5>
+        <li><a href="">在线沟通</a></li>
+        <li><a href="">邮箱沟通</a></li>
+      </ul>
+    </div>
+    <div class="but_end">
+      <li style="list-style: none;">
+        <img src="./images/ewm.png" alt="">
+      </li>
+
+    </div>
+    <div class="footer_information">
+      <div class="bottom_underline"></div>
+      <p class="bottom_address">地址：江西省九江市彭泽县沿江大道12号</p>
+      <p>版权声明 COPYRIGHT&copy; 2025 江西盛和赛新材料科技有限公司 </p>
+    </div>
+
+
+
+  </div>
+
+
+  <script src="script.js"></script>
+
+  <!-- Swiper JS -->
+  <script src="./swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      loop: true,
+    });
+  </script>
+
+
+
+
+</body>
+
+</html>

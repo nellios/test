@@ -1,0 +1,198 @@
+/* 顶部大图轮播 Swiper 样式 */
+.swiper-banner {
+  width: 100vw;
+  height: 80vh;
+  margin: auto;
+  box-shadow: 0 2px 8px #0002;
+  position: relative;
+}
+
+.swiper-banner .swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-banner .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-banner .swiper-pagination-bullet {
+  background: #e00d30;
+  opacity: 0.4;
+  margin: 0 4px !important;
+}
+
+.swiper-banner .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #e00d30 !important;
+}
+
+/* 产品认证轮播 Swiper 样式 */
+.swiper-auth {
+  width: 100%;
+  height: auto;
+  padding: 90px 0;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  background: none;
+}
+
+.swiper-auth .swiper-wrapper {
+  width: 100%;
+}
+
+.swiper-auth .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: transparent;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-property: all;
+}
+
+.swiper-auth .swiper-slide img {
+  height: 100px;
+  width: auto;
+}
+
+/* 关于我们 */
+.about {
+  text-align: center;
+  background-color: white;
+}
+
+.about-title {
+  display: inline-block;
+  left: 50%;
+  font-size: 18px;
+  color: #666;
+  padding: 50px 0 20px 0;
+  border-bottom: 2px solid #E60000;
+}
+
+.about-text {
+  margin-top: 20px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.about>button {
+  border-radius: 5px;
+  background-color: #E60000;
+  border: none;
+  color: white;
+  width: 200px;
+  height: 55px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin-bottom: 80px;
+}
+
+.about>button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* 底部固定图片 */
+.content {
+  background-image: url(./images/bg1.jpg);
+  background-attachment: fixed;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.product_auth {
+  text-align: center;
+  color: white;
+  padding-bottom: 30px;
+}
+
+.product_auth h5 {
+  margin: 50px 0 30px 0;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.product_auth p {
+  padding-bottom: 10px;
+}
+
+.auth_img {
+  padding-bottom: 80px;
+}
+
+.product_butt_middle {
+  margin: 10px 0;
+  border: 1px solid #D7D7D7;
+}
+
+/* 底部灰色栏 */
+.nav_button {
+  background-color: #61696D;
+  height: 300px;
+  padding-top: 60px;
+
+}
+
+.nav_button a {
+  color: #ababab;
+}
+
+.nav_button a:hover {
+  color: white;
+}
+
+.nav_button ul li {
+  /* display: inline; */
+  padding-bottom: 20px;
+  font-size: 13px;
+}
+
+.nav_button h5 {
+  font-weight: 400;
+  font-size: 18px;
+  padding-bottom: 20px;
+}
+
+.but_first {
+  /* margin-left: 200px; */
+  position: absolute;
+  left: 15%;
+  display: inline-block;
+
+}
+
+.but_sec {
+  display: inline-block;
+  position: absolute;
+  left: 30%;
+}
+
+.but_th {
+  position: absolute;
+  left: 45%;
+  display: inline-block;
+}
+
+.but_fou {
+  position: absolute;
+  left: 60%;
+  display: inline-block;
+}
+
+.but_end {
+  position: absolute;
+  left: 75%;
+  display: inline-block;
+}
+
+.but_end img {
+  width: 100px;
+  height: 100px;
+}
